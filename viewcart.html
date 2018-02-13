@@ -1,0 +1,287 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113474001-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113474001-1');
+</script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TPXGNXS');</script>
+  <!-- End Google Tag Manager -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Home</title>
+<link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+<link href='https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>
+ <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script> 
+<script>/*<![CDATA[*/!window.QUnit && document.write('<script src="./js/qunit.js"><\/script>')/*]]>*/</script>
+<!-- 	<script src="https://swarm.simplecartjs.com/js/inject.js"></script> -->
+	
+    <!-- Your project file goes here -->  
+	<script>/*<![CDATA[*/
+	
+	if( QUnit.urlParams.lib && QUnit.urlParams.ver ){
+		document.write('<script src="https://ajax.googleapis.com/ajax/libs/'+ 
+					QUnit.urlParams.lib + '/' + 
+					QUnit.urlParams.ver + '/' + 
+					QUnit.urlParams.lib + '.js"><\/script>');
+	} else {
+		document.write('<script src="./js/jquery.1.6.1.min.js"><\/script>');
+	}
+	
+	if( QUnit.urlParams.commit ){
+		document.write('<script src="inc/get-raw-javascript.php?file=https://raw.github.com/wojodesign/simplecart-js/'+ QUnit.urlParams.commit +'/simpleCart.js"><\/script>');
+	//	document.write('<script src="inc/get-raw-javascript.php?file=https://raw.github.com/wojodesign/simplecart-js/'+ QUnit.urlParams.commit +'/test/test.core.js"><\/script>');
+	} else {
+		document.write('<script src="./js/simpleCart.js"><\/script>');
+	//	document.write('<script type="text/javascript" src="./js/test.core.js"><\/script>');
+	}
+	/*]]>*/</script>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPXGNXS"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+<div class="top-bar">
+<div class="row">
+<div class="top-bar-left">
+<ul class="dropdown menu" data-dropdown-menu>
+<li class="menu-text">Tagging shop</li>
+<li><a href="./index.html">Home</a></li>
+<!--li class="has-submenu"-->
+<li><a href="./ga.html">GA</a></li>
+<!--ul class="submenu menu vertical" data-submenu>
+<li><a href="#">GA</a></li>
+<li><a href="#">GTM</a></li>
+<li><a href="#">Contact us</a></li>
+</ul-->
+<!--/li-->
+<li><a href="./gtm.html">GTM</a></li>
+<li><a href="./contactus.html">Contact us</a></li>
+</ul>
+</div>
+<div class="top-bar-right">
+<ul class="menu">
+
+<li><input type="search" placeholder="Search"></li>
+<li><button type="button" class="button">Search</button></li>
+</ul>
+</div>
+</div>
+</div>
+
+<br>
+
+<div class="row columns">
+<nav aria-label="You are here:" role="navigation">
+<ul class="breadcrumbs">
+<li><a href="#">Home</a></li>
+<li>
+<span class="show-for-sr">Current: </span> Checkout
+</li>
+</ul>
+
+<br>
+<script>
+simpleCart({
+	
+	// array representing the format and columns of the cart, see 
+	// the cart columns documentation
+	cartColumns: [
+		{ attr: "name" , label: "Name" },
+		{ attr: "price" , label: "Price", view: 'currency' },
+		{ view: "decrement" , label: false },
+		{ attr: "quantity" , label: "Qty" },
+		{ view: "increment" , label: false },
+		{ attr: "total" , label: "SubTotal", view: 'currency' },
+		{ view: "remove" , text: "Remove" , label: false }
+	],
+	
+	// "div" or "table" - builds the cart as a table or collection of divs
+	cartStyle: "div", 
+	
+	// how simpleCart should checkout, see the checkout reference for more info 
+	checkout: { 
+		type: "PayPal" , 
+		email: "you@yours.com" 
+	},
+	
+	// set the currency, see the currency reference for more info
+	currency: "USD",
+	
+	// collection of arbitrary data you may want to store with the cart, 
+	// such as customer info
+	data: {},
+	
+	// set the cart langauge (may be used for checkout)
+	language: "english-us",
+	
+	// array of item fields that will not be sent to checkout
+	excludeFromCheckout: [],
+	
+	// custom function to add shipping cost
+	shippingCustom: null,
+	
+	// flat rate shipping option
+	shippingFlatRate: 0,
+	
+	// added shipping based on this value multiplied by the cart quantity
+	shippingQuantityRate: 0,
+	
+	// added shipping based on this value multiplied by the cart subtotal
+	shippingTotalRate: 0,
+	
+	// tax rate applied to cart subtotal
+	taxRate: 0,
+	
+	// true if tax should be applied to shipping
+	taxShipping: false,
+	
+	// event callbacks 
+	beforeAdd				: null,
+	afterAdd				: null,
+	load					: null,
+	beforeSave				: null,
+	afterSave				: null,
+	update					: null,
+	ready					: null,
+	checkoutSuccess				: null,
+	checkoutFail				: null,
+	beforeCheckout				: null
+});
+</script>
+<div class="simpleCart_items" >
+	</div>
+<br />
+	SubTotal: <span id="simpleCart_total" class="simpleCart_total"></span> <br />
+	Tax Rate: <span id="simpleCart_taxRate" class="simpleCart_taxRate"></span> <br />
+	Tax: <span id="simpleCart_tax" class="simpleCart_tax"></span> <br />
+	Shipping: <span id="simpleCart_shipping" class="simpleCart_shipping"></span> <br />
+	-----------------------------<br />
+	Final Total: <span id="simpleCart_grandTotal" class="simpleCart_grandTotal"></span> <br />
+
+	
+	
+	
+
+  
+
+  <!-- Initialize simpleCart -->
+  <script type="text/javascript">
+
+
+    // Configure EURO as currency
+    simpleCart.currency({
+      code: "EUR",
+      name: "Euro",
+      symbol: " &euro; ",
+      delimiter: ".",
+      decimal: ",",
+      after: false,
+      accuracy: 2
+    });
+  </script>
+<div class="row columns">
+
+<div class="column row">
+<hr>
+<div class="simpleCart_items" >
+	
+<div class="tabs-content" data-tabs-content="example-tabs">
+<div class="tabs-panel is-active" id="panel1">
+<h3>Your cart</h3>
+<div class="media-object stack-for-small ">
+<div class="media-object-section">
+<img class="thumbnail" src="https://placehold.it/200x200">
+</div>
+<div class="media-object-section">
+<h5>Product 1</h5>
+<p>I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you.</p>
+</div>
+</div>
+<div class="media-object stack-for-small">
+<div class="media-object-section">
+<img class="thumbnail" src="https://placehold.it/200x200">
+</div>
+<div class="media-object-section">
+<h5>Product 2</h5>
+<p>I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you</p>
+</div>
+</div>
+<div class="media-object stack-for-small">
+<div class="media-object-section">
+<img class="thumbnail" src="https://placehold.it/200x200">
+</div>
+<div class="media-object-section">
+<h5>Product 3</h5>
+<p>I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you</p>
+</div>
+</div>
+</div>
+<!--label>
+My Review
+<textarea placeholder="None"></textarea>
+</label-->
+<h4>Total <span id="simpleCart_grandTotal" class="simpleCart_grandTotal"></span>	<a href="javascript:;" class="simpleCart_checkout">
+ <button class="button">Go to checkout</button></a>	
+</h4>
+</div>
+<div class="tabs-panel" id="panel2">
+<div class="row medium-up-3 large-up-5">
+<div class="column">
+<img class="thumbnail" src="https://placehold.it/350x200">
+<h5>Other Product <small>$22</small></h5>
+<p>In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam.</p>
+<a href="#" class="button hollow tiny expanded">Buy Now</a>
+</div>
+<div class="column">
+<img class="thumbnail" src="https://placehold.it/350x200">
+<h5>Other Product <small>$22</small></h5>
+<p>In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam.</p>
+<a href="#" class="button hollow tiny expanded">Buy Now</a>
+</div>
+<div class="column">
+<img class="thumbnail" src="https://placehold.it/350x200">
+<h5>Other Product <small>$22</small></h5>
+<p>In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam.</p>
+<a href="#" class="button hollow tiny expanded">Buy Now</a>
+</div>
+<div class="column">
+<img class="thumbnail" src="https://placehold.it/350x200">
+<h5>Other Product <small>$22</small></h5>
+<p>In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam.</p>
+<a href="#" class="button hollow tiny expanded">Buy Now</a>
+</div>
+<div class="column">
+<img class="thumbnail" src="https://placehold.it/350x200">
+<h5>Other Product <small>$22</small></h5>
+<p>In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam.</p>
+<a href="#" class="button hollow tiny expanded">Buy Now</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row column">
+<hr>
+<ul class="menu">
+<li class="float-right">Copyright Quru - Technical 2018</li>
+</ul>
+ </div>
+<script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+<script>
+      $(document).foundation();
+    </script>
+</body>
+</html>
