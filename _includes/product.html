@@ -1,11 +1,17 @@
-<div class="product">
-
-  <a class="product" href="{{ site.baseurl }}{{ product.url }}">
-    <img src="{{ product.image }}" alt="{{ product.name }}" class="thumbnail"/>
-    <p>{{ product.name }}</p>
-  </a>
-
-  <button class="snipcart-add-item"
+<div class="product-card product">
+  <div class="product-card-thumbnail">
+    <a class="product" href="{{ site.baseurl }}{{ product.url }}"> <img src="{{ product.image }}" alt="{{ product.name }}" class="thumbnail"/> <p>{{ product.name }}</p></a>
+  </div>
+  <h2 class="product-card-title"><a href="#">{{ product.name }}</a></h2>
+  <span class="product-card-desc">{{ product.content }}</span>
+  <span class="product-card-price">{{ product.price }}€</span><span class="product-card-sale">{{ product.price }}€</span>
+  <!--<div class="product-card-colors">
+    <button href="#" class="product-card-color-option"><img src="https://placehold.it/30x30"/></button>
+    <button href="#" class="product-card-color-option"><img src="https://placehold.it/30x30"/></button>
+    <button href="#" class="product-card-color-option"><img src="https://placehold.it/30x30"/></button>
+    <button href="#" class="product-card-color-option"><img src="https://placehold.it/30x30"/></button>
+  </div>-->
+    <button class="snipcart-add-item"
     data-item-name="{{ product.name }}"
     data-item-id="{{ product.sku }}"
     data-item-image="{{ product.image }}"
@@ -13,5 +19,4 @@
     data-item-price="{{ product.price }}">
     Buy it for {{ product.price }} $
   </button>
-
 </div>
