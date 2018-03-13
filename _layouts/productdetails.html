@@ -3,25 +3,46 @@ layout: default
 head:
   snipcart.html
 ---
-<div class="product-details">
-  <img src="{{ page.image }}" alt="{{ page.name }}" class="thumbnail"/>
-  <div class="product-description">
-    <p>{{ page.name }}</p>
 
-    <p>
-      {{ page.content }}
-    </p>
+<div class="row product-details">
+<div class="medium-6 columns">
+<img src="{{ page.image }}" alt="{{ page.name }}" class="thumbnail"/>
+</div>
+<div class="medium-6 large-5 columns product-description">
 
-    <button class="snipcart-add-item"
+<h3 class="item_name">{{ page.name }}</h3>
+<p>{{ page.content }}</p>
+<span class="item_price">{ page.price }}</span> per day
+<label>Size
+<select class="item_Size">
+<option value="free">Free</option>
+<option value="360">360 - not available yet</option>
+</select>
+</label>
+<div class="row" >
+<div class="small-3 columns">
+<label for="middle-label" class="middle item_quantity">Quantity</label>
+</div>
+<div class="small-9 columns">
+<input type="text" id="middle-label" placeholder="One container is usually enough">
+</div>
+</div>
+   
+<input type="button"  id='addToCart' class="button large expanded item_add" />
+    <button id='addToCart' class="snipcart-add-item"
       data-item-name="{{ page.name }}"
       data-item-id="{{ page.sku }}"
       data-item-image="{{ page.image }}"
       data-item-url="{{ site.baseurl }}"
       data-item-price="{{ page.price }}">
-      Buy it for {{ page.price }} $
+      Buy now for {{ page.price }} $
     </button>
-  </div>
 </div>
+</div>
+
+
+
+
 <div class="product-reviews">
   {% assign reviews = site.data.reviews | where:'product',page.slug %}
   {% assign reviewCount = reviews | size %}
