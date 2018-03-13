@@ -1,17 +1,53 @@
-<div class="product">
+<div class="row product">
+<div class="medium-6 columns">
+<img class="thumbnail" src="./img/gtm0.png">
+<div class="row small-up-4">
+<div class="column">
+<img class="thumbnail" src="./img/gtm1.png">
+</div>
+<div class="column">
+<img class="thumbnail" src="./img/gtm2.png">
+</div>
+<div class="column">
+<img class="thumbnail" src="./img/gtm3.png">
+</div>
 
-  <a class="product" href="{{ site.baseurl }}{{ product.url }}">
-    <img src="{{ product.image }}" alt="{{ product.name }}" class="thumbnail"/>
-    <p>{{ product.name }}</p>
-  </a>
-
-  <button class="snipcart-add-item"
+</div>
+</div>
+<div class="medium-6 large-5 columns">
+<div class="simpleCart_shelfItem">
+<h3 class="item_name">Google Tag Manager</h3>
+<p>Google Tag Manager helps make tag management simple, easy and reliable by allowing marketers and webmasters to deploy website tags all in one place.</p>
+<span class="item_price">1 050€</span> per day
+<label>Size
+<select class="item_Size">
+<option value="free">Free</option>
+<option value="360">360 - not available yet</option>
+</select>
+</label>
+<div class="row" >
+<div class="small-3 columns">
+<label for="middle-label" class="middle item_quantity">Quantity</label>
+</div>
+<div class="small-9 columns">
+<input type="text" id="middle-label" placeholder="One container is usually enough">
+</div>
+</div>
+   
+<input type="button"  id='addToCart' class="button large expanded item_add" />
+<button class="snipcart-add-item"
     data-item-name="{{ product.name }}"
     data-item-id="{{ product.sku }}"
     data-item-image="{{ product.image }}"
     data-item-url="{{ site.baseurl }}"
     data-item-price="{{ product.price }}">
-    Buy it for {{ product.price }} $
+    Buy Now for {{ product.price }} $
   </button>
-
+   <!--<div class="small secondary expanded button-group">
+<a class="button">Facebook</a>
+<a class="button">Twitter</a>
+<a class="button">Yo</a>-->
 </div>
+</div>
+</div>
+ </div>
