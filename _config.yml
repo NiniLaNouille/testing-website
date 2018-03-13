@@ -1,7 +1,7 @@
 # Site settings
 title: Quru - Technical services
 email: info@quru.com
-description: Here's a quick demo showing the Quru Internal website for testing purposes. Integration between Snipcart, Jekyll, Github. We hope you like it!
+description: Here's Quru Internal website for testing purposes. Integration between Snipcart, Jekyll, Github. We hope you like it!
 baseurl: "/testing-website" # the subpath of your site, e.g. /blog/
 url: "https://ninilanouille.github.io" # the base hostname & protocol for your site
 twitter_username: QuruFM
